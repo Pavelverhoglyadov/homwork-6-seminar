@@ -22,13 +22,20 @@ int FillArray()
     return count;
 }
 
-void PrintArray(int array)
+void PrintArray(int num)
 {
-    Console.WriteLine($"Вы ввели {(array)} положительных чисел");
+    if (num < 2)
+        Console.WriteLine($"Вы ввели {(num)} положительное чисело");
+
+    else if (num < 1 || num > 4)
+        Console.WriteLine($"Вы ввели {(num)} положительных чисел");
+
+    else if (num > 1 || num < 5)
+        Console.WriteLine($"Вы ввели {(num)} положительных числа");
 }
 
-int array = FillArray();
-PrintArray(array);
+int num = FillArray();
+PrintArray(num);
 
 
 
